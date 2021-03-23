@@ -36,7 +36,7 @@ module.exports = options => {
 			try {
 				const result = await instance(file.contents);
 				file.contents = result;
-				file.extname = '.webp';
+				file.extname .= '.webp';
 				callback(null, file);
 			} catch (error) {
 				callback(new PluginError('gulp-webp', error, {fileName: file.path}));
